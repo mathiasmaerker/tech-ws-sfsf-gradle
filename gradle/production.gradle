@@ -1,0 +1,16 @@
+configurations {
+	   compile.exclude module: "spring-boot-starter-tomcat"
+       compile.exclude module: "tomcat-embed-el"
+       compile.exclude module: "logback-classic"
+}
+
+
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter-web") 
+    compile("org.springframework.boot:spring-boot-starter-data-jpa") 
+    compile("org.springframework.boot:spring-boot-starter-data-rest") 
+    
+    providedCompile("javax.servlet:javax.servlet-api")
+    providedCompile("org.slf4j:slf4j-api")
+}
+	
